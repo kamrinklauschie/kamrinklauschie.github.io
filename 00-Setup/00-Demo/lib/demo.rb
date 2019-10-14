@@ -5,4 +5,5 @@ def circle_area(radius)
       return 0
     else
       return area
+    end
 end
