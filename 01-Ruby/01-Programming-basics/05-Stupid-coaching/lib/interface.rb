@@ -3,12 +3,12 @@ require_relative "coach_answer"
 
 ### Talking with the user ###
 
-while true
-  puts "Welcome to your coaching session!"
+puts "Welcome to your coaching session!"
+your_message = gets.chomp
+
+until coach_answer(your_message) == ""
+  p coach_answer(your_message)
   your_message = gets.chomp
-  the_answer = coach_answer(your_message)
-  p the_answer
-  break if the_answer == ""
 end
 
 #############################
