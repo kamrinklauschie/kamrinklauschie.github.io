@@ -6,14 +6,12 @@ def colorful?(num)
     x * y, y * z, x * y * z
   if
     return true
-  elseif num > 999
+  elsif num > 999
     return
   else
     return false
   end
 end
-
-
 
 
 0 = colorful
@@ -24,5 +22,3 @@ end
 10 = not colorful
 236 = not colorful
 999 = not colorful
-
-end
