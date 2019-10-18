@@ -9,10 +9,26 @@ DISHES_CALORIES = {
   "Sprite" => 150
 }
 
-def poor_calories_counter(burger, side, beverage)
-  DISHES_CALORIES[burger] + DISHES_CALORIES[side] + DISHES_CALORIES[beverage]
-end
+MEALS = {
+  "Happy Meal" => ["Cheese Burger", "French Fries", "Coca Cola"],
+  "Best Of Big Mac" => ["Big Mac", "French Fries", "Coca Cola"],
+  "Best Of McChicken" => ["McChicken", "Salad", "Sprite"]
+}
 
 def calories_counter(orders)
-  # TODO: return number of calories for a less constrained order
+  sum = 0
+  orders.each do |order|
+    if MEALS.include? order
+      foods_array = MEALS[order]
+      foods_array.each do |each_food|
+        sum += DISHES_CALORIES[each_food]
+      end
+    elsif DISHES_CALORIES.include? order
+      sum += DISHES_CALORIES[order]
+    end
+  end
+  return sum
 end
+
+orders = ["French Fries", "Sprite"]
+p calories_counter(orders)
