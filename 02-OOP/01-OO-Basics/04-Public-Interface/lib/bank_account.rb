@@ -11,6 +11,9 @@ class BankAccount
   # - you can withdraw or deposit money
   # - You can see the balance of the account (through the balance variable)
 
+  attr_reader :name
+  attr_accessor :balance
+
   MIN_DEPOSIT = 100
 
   def initialize(name, iban, initial_deposit, password)
@@ -18,7 +21,7 @@ class BankAccount
 
     @password     = password
     @transactions = []
-    @balance      = 0
+    @balance      = initial_deposit
     @name         = name
     @iban         = iban
 
@@ -28,16 +31,27 @@ class BankAccount
   def withdraw(amount)
     # TODO: Call add_transaction with the right argument
     # TODO: returns a string with a message
+    @balance = @balance - amount
+    return "You withdrew #{amount}."
   end
 
   def deposit(amount)
     # TODO: Call add_transaction with the right argument
     # TODO: returns a string with a message
+    @balance = @balance + amount
+    return "You deposited #{amount}."
   end
 
   def transactions_history(args = {})
     # TODO: Check if there is a password and if so if it is correct
     # TODO: return a string displaying the transactions, BUT NOT return the transaction array!
+    if @password == args[:password]
+      return true
+    elsif args[:password].nil?
+      return "no password given"
+    else
+      return "wrong password"
+    end
   end
 
   def iban
