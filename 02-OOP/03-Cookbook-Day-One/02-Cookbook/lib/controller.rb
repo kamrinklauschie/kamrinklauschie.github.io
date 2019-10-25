@@ -5,12 +5,12 @@ class Controller
     @cookbook = cookbook
   end
 
-  def list
+  def destroy
   end
 
   def create
   end
 
-  def destroy
+  def list
   end
 end
