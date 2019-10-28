@@ -9,6 +9,12 @@ class RecipesView
 
   def ask_for_index
     puts "Which number?"
+    gets.chomp
+  end
+
+  def ask_for_search
+    puts "What would you like to search?"
+    gets.chomp
   end
 
   def display_recipes(recipes)

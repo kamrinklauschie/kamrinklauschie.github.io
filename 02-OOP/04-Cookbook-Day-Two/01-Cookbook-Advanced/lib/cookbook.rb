@@ -11,6 +11,7 @@ class Cookbook
   end
 
   def add_recipe(recipe)
+    # binding.pry
     @recipes << recipe
     update_csv
   end
@@ -31,7 +32,7 @@ class Cookbook
       name        = row[0]
       description = row[1]
       recipe      = Recipe.new(name, description)
-      @recipes = recipe
+      @recipes << recipe
     end
   end
 

@@ -1,5 +1,7 @@
 require_relative 'recipe'
 require_relative 'recipes_view'
+require_relative 'parsing'
+require "pry-byebug"
 
 class Controller
   def initialize(cookbook)
@@ -34,5 +36,20 @@ class Controller
     recipes = @cookbook.all
     # 2. Ask the view to display them
     @view.display_recipes(recipes)
+  end
+
+  def search
+    # 1. Ask a user for a keyword to search
+    search_criteria = @view.ask_for_search
+    # 2. Make an HTTP request to the recipes website with our keyword
+    # 3. Parse the HTML document to extract the first 5 recipes suggested and store them in an Array
+    search_recipes = parsing(search_criteria)
+    # 4. Display them in an indexed list
+    @view.display_recipes(search_recipes)
+    # 5. Ask the user which recipe they want to import (ask for an index)
+    recipe_number = @view.ask_for_index
+    # binding.pry
+    # 6. Add it to the Cookbook
+    @cookbook.add_recipe(search_recipes[recipe_number.to_i - 1])
   end
 end
