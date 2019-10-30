@@ -56,8 +56,8 @@ class OrderRepository
   end
 
   def save_csv
-    csv_options = { write_headers: true, headers: [:id, :meal, :employee, :customer, :delivered] }
-    serialized_orders = @orders.map { |order| { id: order.id, meal: order.meal.id, employee: order.employee.id, customer: order.customer.id, delivered: order.delivered } }
+    csv_options = { write_headers: true, headers: [:id, :delivered, :meal_id, :employee_id, :customer_id] }
+    serialized_orders = @orders.map { |order| { id: order.id, meal_id: order.meal.id, employee_id: order.employee.id, customer_id: order.customer.id, delivered: order.delivered } }
     CSV.open(@csv_file_path, 'wb', csv_options) do |row|
       serialized_orders.each { |order| row << order }
     end
