@@ -28,7 +28,7 @@ end
 
 def long_tracks(db, min_length)
   # TODO: return an array of tracks' names verifying: duration > min_length (minutes) sorted by length (ascending)
-  length = min_length * 60000
+  length = min_length * 60_000
   results = db.execute("SELECT name FROM tracks
     WHERE milliseconds >= #{length}
     ORDER BY milliseconds ASC")
