@@ -1,6 +1,7 @@
 # You can use a global variable, DB, which
 # is an instance of SQLite3::Database
 # NO NEED TO CREATE IT, JUST USE IT.
+require 'pry-byebug'
 
 class Post
   # TODO
@@ -14,22 +15,17 @@ class Post
   end
 
   def self.find(id)
-    results = db.execute("SELECT * FROM table WHERE (?, ?)", [id, #{id}])
-    return results
+    DB.results_as_hash = true
+    results = DB.execute("SELECT * FROM posts WHERE id = ?", id)[0]
+    return nil if results.nil?
+
+    post_instance = Post.new(id: results["id"], title: results["title"], url: results["url"], votes: results["votes"])
+    return post_instance
   end
 
   def self.all
-    results = db.execute('SELECT * FROM posts;')
+    results = DB.execute('SELECT * FROM posts;')
+    binding.pry
+    return [] if results.nil?
   end
 end
-
-
-# CREATE TABLE `posts` (
-#   `id`  INTEGER PRIMARY KEY AUTOINCREMENT,
-#   `title` TEXT,
-#   `url` TEXT,
-#   `votes`  INTEGER
-# );
-
-
-# db.execute("INSERT INTO player_info (touchdowns, team) VALUES (?, ?)", [10, "Giants"]
