@@ -24,8 +24,13 @@ class Post
   end
 
   def self.all
-    results = DB.execute('SELECT * FROM posts;')
-    binding.pry
+    all_instances = []
+    results = DB.execute('SELECT * FROM posts')
+    results.each do |result|
+      all_instances << Post.new(id: result["id"], title: result["title"], url: result["url"], votes: result["votes"])
+    end
     return [] if results.nil?
+
+    return all_instances
   end
 end
