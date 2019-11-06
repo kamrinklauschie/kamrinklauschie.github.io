@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Suranna&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="container">
+  <div class="card">
+
+
+<h1>What's up? I'm Kam! <br>
+Waving from Rio de Janeiro. </h1>
+
+<img src="images/Kam.png" alt="Kamrin Klauschie" width="200 px">
+
+<p>I'm a Software Engineer from California. I love dogs, reading, espresso, and a good game of soccer! </p>
+
+<a href="#"><button type="button" id="button1">apprenticeship.io</a></button>
+<a href="#"><button type="button" id="button2">allyship.io</a></button>
+</div>
+
+<div id="footer">
+
+      <ion-icon size="large" name="logo-github"></ion-icon></i></a>
+      <ion-icon size="large" name="logo-pinterest"></ion-icon></i></a>
+      <ion-icon size="large" name="logo-facebook"></ion-icon></i></a>
+      <ion-icon size="large" name="logo-linkedin"></ion-icon></i></a>
+      <ion-icon size="large" name="logo-twitter"></ion-icon></i></a>
+      <ion-icon size="large" name="logo-instagram"></ion-icon></i></a>
+
+</div>
+</div>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+<script>
+
+
+var colors = [
+
+  [ "#ec5b55", "#af1f0e"],
+  [ "#f08c34", "#c55123"],
+  [ "#f9dd6c", "#d8ab3a"],
+  [ "#388174", "#73fbe2"],
+  [ "#49c5b6", "#255a55"],
+  [ "#a9d1d5", "#5a8085"],
+  [ "#3983dd", "#a5d3fb"],
+  [ "#4a5de6", "#b0bafa"],
+  [ "#7a55e7", "#bdaae8"]
+];
+
+function getRandom(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+var rand = getRandom(0, 8)
+
+background_color = colors[rand][0]
+font_color = colors[rand][1]
+
+document.body.style.backgroundColor = background_color
+document.body.style.color = font_color
+document.getElementById("button1").style.color = font_color
+document.getElementById("button2").style.color = font_color
+
+</script>
+</body>
+</html>
