@@ -1,129 +1,114 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Bootstrap Utility Classes</title>
-    <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
+  <title>Bootstrap Utility Classes</title>
+  <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
-  </head>
-  <body class="bg-light">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
+</head>
+<body class="bg-light">
 
-    <!-- navbar -->
-    <div class="">
-      <div class="container">
-        <img src="images/deliveroo.png" alt="" width="140px">
+  <!-- navbar -->
 
-        <!-- turn this link into a button -->
-        <a href="#" class="">Login</a>
+  <div class="border-bottom bg-white">
+    <div class="container d-flex align-items-center justify-content-between py-2">
+      <img src="images/deliveroo.png" alt="" width="140px">
+      <button type="button" class="btn btn-primary" a href="#">Login</button>
+    </div>
+  </div>
+  <!-- /navbar -->
+
+  <!-- restaurant info -->
+
+  <div class="container p-3 h-50">
+    <div class="row">
+      <div class="col-md-8">
+        <h3>Pizza Union - Dalston</h3>
+        <p>An all-day Italian Pizza Bar - serving authentic Roman-style thin & crispy 12” pizzas made from scratch using the freshest ingredients, fire-baked in a superfast 3 minutes in our giant bell-shaped traditional Italian stone-fire oven.</p>
+      </div>
+      <div class="col-md-4">
+        <img src="https://f.roocdn.com/images/menus/70997/header-image.jpg?width=740&height=320&auto=webp&format=jpg&fit=crop&v=1531393618" alt="" class="w-100">
       </div>
     </div>
-    <!-- /navbar -->
+  </div>
+  <!-- /restaurant info -->
 
-    <!-- restaurant info -->
-    <div class="">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8">
-            <h3>Pizza Union - Dalston</h3>
-            <p>An all-day Italian Pizza Bar - serving authentic Roman-style thin & crispy 12” pizzas made from scratch using the freshest ingredients, fire-baked in a superfast 3 minutes in our giant bell-shaped traditional Italian stone-fire oven.</p>
+  <!-- restaurant menu / checkout-->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="alert alert-primary" role="alert">
+          Going to order alcohol? We'll need to see your <strong>ID</strong>.
+        </div>
+
+        <h2>12" Pizza</h2>
+
+        <div class="container">
+          <div class="card mt-3 p-3">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Margherita</strong></h5>
+              <p class="card-text"><small>Tomato, basil, mozzarella</small></p>
+              <a href="#" class="btn btn-primary"><span>£5.95</span></a>
+            </div>
           </div>
-          <div class="col-md-4">
-            <img src="https://f.roocdn.com/images/menus/70997/header-image.jpg?width=740&height=320&auto=webp&format=jpg&fit=crop&v=1531393618" alt="" class="w-100">
+
+          <div class="card mt-3 p-3">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Diavola</strong></h5>
+              <p class="card-text"><small>Tomato, basil, mozzarella</small></p>
+              <a href="#" class="btn btn-primary"><span>£5.95</span></a>
+            </div>
+          </div>
+
+          <div class="card mt-3 p-3">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Regina</strong></h5>
+              <p class="card-text"><small>Tomato, basil, mozzarella</small></p>
+              <a href="#" class="btn btn-primary"><span>£5.95</span></a>
+            </div>
+          </div>
+
+          <div class="card mt-3 p-3">
+            <div class="card-body">
+              <h5 class="card-title"><strong>4 Formaggi</strong></h5>
+              <p class="card-text"><small>Tomato, basil, mozzarella</small></p>
+              <a href="#" class="btn btn-primary"><span>£5.95</span></a>
+            </div>
+          </div>
+
+          <div class="card mt-3 p-3">
+            <div class="card-body">
+              <h5 class="card-title"><strong>4 Stagioni</strong></h5>
+              <p class="card-text"><small>Tomato, basil, mozzarella</small></p>
+              <a href="#" class="btn btn-primary"><span>£5.95</span></a>
+            </div>
           </div>
         </div>
+
+        <!-- checkout -->
+        <!-- /checkout -->
+      </div>
+      <div class="col-4">
+        <div class="card-body bg-white border p-3">
+          <a href="#" class="btn btn-primary w-100"><span>Checkout</span></a>
+          <p class="card-text d-flex justify-content-between mt-3"><strong>Margherita</strong> (1)</p><p>£4.95</p>
+          <p class="card-text d-flex justify-content-between mt-3"><p><strong>Regina</strong> (2)</p><p>£5.95</p>
+          <p class="card-text d-flex justify-content-between mt-3"><p><strong>Diavola</strong> (1)</p><p>£6.95</p>
+          <p class="card-text d-flex justify-content-between mt-3 border-bottom"><p><strong>Total</strong></p>(1)</p><p><strong>£17.85</strong></p>
+        </div>
+
       </div>
     </div>
-    <!-- /restaurant info -->
+  </div>
 
-    <!-- restaurant menu / checkout-->
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8">
-
-          <!-- turn this into an alert (warning) -->
-          <div class="">
-            Going to order alcohol? We'll need to see your <strong>ID</strong>.
-          </div>
-
-          <h2>12" Pizza</h2>
-
-          <!-- make a card -->
-          <div class="">
-            <p><strong>Margherita</strong></p>
-            <p><small>Tomato, basil, mozzarella</small></p>
-            <span>£5.95</span>
-          </div>
-
-          <!-- make a card -->
-          <div class="">
-            <p><strong>Diavola</strong></p>
-            <p><small>Tomato, basil, mozzarella</small></p>
-            <span>£5.95</span>
-          </div>
-
-          <!-- make a card -->
-          <div class="">
-            <p><strong>Regina</strong></p>
-            <p><small>Tomato, basil, mozzarella</small></p>
-            <span>£5.95</span>
-          </div>
-
-          <!-- make a card -->
-          <div class="">
-            <p><strong>4 Formaggi</strong></p>
-            <p><small>Tomato, basil, mozzarella</small></p>
-            <span>£5.95</span>
-          </div>
-
-          <!-- make a card -->
-          <div class="">
-            <p><strong>4 stagioni</strong></p>
-            <p><small>Tomato, basil, mozzarella</small></p>
-            <span>£5.95</span>
-          </div>
-          <!-- /menu -->
-        </div>
-
-        <div class="col-md-4">
-          <!-- checkout -->
-          <div class="">
-
-            <!-- make this a full length button -->
-            <a href="#" class="">Checkout</a>
-
-            <div class="">
-              <p><strong>Margherita</strong> (1)</p>
-              <p>£4.95</p>
-            </div>
-
-            <div class="">
-              <p><strong>Regina</strong> (2)</p>
-              <p>£5.95</p>
-            </div>
-
-            <div class="">
-              <p><strong>Diavola</strong> (1)</p>
-              <p>£6.95</p>
-            </div>
-
-            <div class="">
-              <p><strong>Total</strong></p>
-              <p><strong>£17.85</strong></p>
-            </div>
-          </div>
-          <!-- /checkout -->
-        </div>
-      </div>
-    </div>
-
-    <!-- Including Bootstrap JS (with its Popper.js / jQuery dependency) so that dynamic components work -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-  </body>
+  <!-- Including Bootstrap JS (with its Popper.js / jQuery dependency) so that dynamic components work -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</body>
 </html>
