@@ -1,15 +1,15 @@
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Airbnb home</title>
-    <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Varela">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
-    <link rel="stylesheet" href="css/style.css">
+<head>
+  <meta charset="utf-8">
+  <title>Airbnb home</title>
+  <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Varela">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
+  <link rel="stylesheet" href="css/style.css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- Leave those next 4 lines if you care about users using IE8 -->
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- Leave those next 4 lines if you care about users using IE8 -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -17,12 +17,46 @@
   </head>
   <body>
 
-    <!-- Your responsive signup form -->
+    <div class="container">
+      <div class="col-12 col-md-6 col-lg-4">
+        <form action="#">
+          <h2 class="text-center mb-5">Create Your Account</h2>
+          <form>
+            <div class="form-row">
+              <div class="col-6 form-group">
+                <label for="firstname">First Name</label>
+                <input type="text" class="form-control" id="firstname" aria-describedby="emailHelp" placeholder="Bob">
+                <small id="emailHelp" class="form-text text-muted"></small>
+              </div>
+              <div class="col-6 form-group">
+                <label for="lastname">Last Name</label>
+                <input type="text" class="form-control" id="lastname" aria-describedby="emailHelp" placeholder="Sponge">
+                <small id="emailHelp" class="form-text text-muted"></small>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="spongebob@gmaill.com">
+              <small id="emailHelp" class="form-text text-muted"></small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">How did you find us?</label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option>Facebook</option>
+                <option>Google search</option>
+                <option>A friend or family member</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg w-100">Sign Up</button>
+          </form>
 
-
-    <!-- Including Bootstrap JS (with its Popper.js / jQuery dependency) so that dynamic components work -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-  </body>
-</html>
+          <!-- Including Bootstrap JS (with its Popper.js / jQuery dependency) so that dynamic components work -->
+          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+        </body>
+        </html>
