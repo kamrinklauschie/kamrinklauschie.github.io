@@ -12,4 +12,5 @@ end
 
 def better_refrain(lyrics, options = { vibrato: 0, number_of_times: 1, strong: false })
   # TODO: implement this better version which breaks argument order dependency
+
 end
