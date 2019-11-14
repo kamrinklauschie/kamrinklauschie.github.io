@@ -1,4 +1,4 @@
 const displayLogo = () => {
   const logo = document.querySelector('#logo');
-  logo.style.display = '';
+  logo.style.display = 'block';
 };
