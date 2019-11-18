@@ -11,8 +11,6 @@ def http_requests_per_page
   # TODO: Return the variable that correctly describes the relationship between
   # a web page, and the number of HTTP requests required to load that
   # page.
-
-  a = 'There is always one HTTP request per page.'
   b = 'There is one HTTP request per resource/file needed for a web page (HTML, CSS, JS, etc).'
   return b
 end
@@ -20,8 +18,6 @@ end
 def view_responsibility
   # TODO: Return the variable whose value describes the responsibility of the
   # `View` in the MVC design pattern.
-  a = 'executes the appropriate reaction to user actions'
-  b = 'allows us to define data types in our application'
   c = 'displays information to users'
   return c
 end
